@@ -36,7 +36,13 @@ body {
     font-weight: bold;
   }
 
-  button {
+  input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
     padding: 10px;
     background-color: #28a745;
     color: white;
