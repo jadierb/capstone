@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking - Trip Planner</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <a class="logo" href="index.html">Trip Planner</a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="travel-tips.html">Travel Tips</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="booking-hero">
-      <h1>Book Your Next Trip</h1>
-      <p>Complete the form below to start planning a personalized trip recommendation.</p>
-    </section>
-
-    <section class="booking-form-section">
-      <form id="booking-form">
-        <div class="form-row">
-          <label for="traveler-name">Traveler Name</label>
-          <input type="text" id="traveler-name" placeholder="Full name" required>
-        </div>
-        <div class="form-row">
-          <label for="destination-choice">Destination</label>
-          <select id="destination-choice">
-            <option value="mountains">Mountain Escape</option>
-            <option value="beach">Beach Retreat</option>
-            <option value="city">City Adventure</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="travel-date">Preferred Travel Date</label>
-          <input type="date" id="travel-date" required>
-        </div>
-        <div class="form-row">
-          <label for="package-type">Package Type</label>
-          <select id="package-type">
-            <option value="economy">Economy</option>
-            <option value="standard">Standard</option>
-            <option value="deluxe">Deluxe</option>
-          </select>
-        </div>
-        <button type="submit">Request Quote</button>
-      </form>
-      <p class="form-result" id="booking-result"></p>
-    </section>
-
-    <section class="booking-info">
-      <div class="card">
-        <h2>Fast Booking</h2>
-        <p>Use our drop-down menu to choose the perfect package. We keep the process simple and clear.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">Trip Planner</a>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destination</a></li>
+            <li><a href="content.html">Content</a></li>
+            <li><a href="galery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="card">
-        <h2>Flexible Options</h2>
-        <p>Select dates and styles that match your travel goals, from adventure tours to relaxing escapes.</p>
-      </div>
-    </section>
-  </main>
+    </header>
+
+    <main>
+      <section class="booking-hero">
+        <h1>Book Your Next Trip</h1>
+        <p>Complete the form below to start planning a personalized trip recommendation.</p>
+      </section>
+
+      <section class="booking-form-section">
+        <form id="booking-form">
+          <div class="form-row">
+            <label for="traveler-name">Traveler Name</label>
+            <input type="text" id="traveler-name" placeholder="Full name" required>
+          </div>
+          <div class="form-row">
+            <label for="destination-choice">Destination</label>
+            <select id="destination-choice">
+              <option value="mountains">Mountain Escape</option>
+              <option value="beach">Beach Retreat</option>
+              <option value="city">City Adventure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="travel-date">Preferred Travel Date</label>
+            <input type="date" id="travel-date" required>
+          </div>
+          <div class="form-row">
+            <label for="package-type">Package Type</label>
+            <select id="package-type">
+              <option value="economy">Economy</option>
+              <option value="standard">Standard</option>
+              <option value="deluxe">Deluxe</option>
+            </select>
+          </div>
+          <button type="submit">Request Quote</button>
+        </form>
+        <p class="form-result" id="booking-result"></p>
+      </section>
+
+      <section class="booking-info">
+        <div class="card">
+          <h2>Fast Booking</h2>
+          <p>Use our drop-down menu to choose the perfect package. We keep the process simple and clear.</p>
+        </div>
+        <div class="card">
+          <h2>Flexible Options</h2>
+          <p>Select dates and styles that match your travel goals, from adventure tours to relaxing escapes.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Trip Planner</p>
+    </footer>
+  </body>
+</html>
