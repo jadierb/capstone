@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body data-page="home"
+    <!--HEADER -->
+    
         <header class="site-header" id="siteHeader">
             <div class="container header-inner">
                 <a href="index.html" class="brand" data-testid="brand-logo">
@@ -23,40 +25,63 @@
                     <li><a href="index.html" class="active" data-testid="nav-home">Home</a></li>
                     <li><a href="destinations.html" data-testid="nav-destinations">Destination</a></li>
                     <li><a href="planner.html" data-testid="nav-planner">Planner</a><li>
-                        
-                </ul>
+                    <li><a href="budget.html"  data-testid="nav-budget">Budget</a><li>
+                    <li><a href="weather.html" data-testid="nav-weather">Weather</a><li>
+                    <li><a href="about.html" data-testid="nav-about">About</a><li>
+                    <li><a href="contact.html" data-testid="nav-contact">Contact</a><li>
 
-            </nav>
-        </header>
-            
-        </header>
+                    </ul>
+                    </nav>
+                    <div class="nav-actions">
+                        <span id="UserBadge" class="user-badge hidden" data-testid="user-badge"></span>
+                        <a href="login.html" id="'oginLink" class="btn btn-ghost" data-testid="login-link">Log in</a>
+                        <a href="signup.html" id="signupLink" class="btn btn-primary" data-testid="signup-link">Sign up</a>
+                        <button id="logoutBtn" class="btn btn ghost hidden" data-testid="logout-btn">Log out</button>
+                        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">=</button>
+                    </div>
+                </div>
+                </header>
 
-        <main>
-            <form id="trip-form">
-                <label for="from">From:</label>
-                <input type="text" id="from" placeholder="Enter starting point">
+<!--HERO -->
+                <main>
+                    <section class="hero">
+                        <div class="container hero-inner">
+                            <div class="hero-copy">
+                                <p class="kicker">a friendly trip planner</p>
+                                <h1 class="display">
+                                    plan the <span class="accent-script">trip</span> you'll actually take
+                                </h1>
+                                <p class="lede">
+                                    Build day-by-day itineraries track your budget in any currency, and peek at
+                                    the weather before you pack. No spreadsheet,No tabs swirl. Just you and the road.
+                                </p>
+                                <div class="hero-cta">
+                                    <a href="planner.html" class="btn-btn-primary btn-lg" data-testid="href-start-planning">Start planning </a>
+                                    <a href="destination.html" class="btn-btn-outling btn-lg" data-testid="hero-expolre">Explore destinations</a>
+                                </div>
+                                <ul class="hero-meta">
+                                    <li><strong>250+<strongr> countries</li>
+                                     <li><strong>Live</strong>< weather</li> 
+                                     <li><strong>Free</strong> forever<li>
 
-                <label for="to">To:</label>
-                <input type="text" id="to" placeholder="Enter destination">
+                                </ul>
+                            </div>
+                            <div class="hero-media">
+                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80" alt="Mountain" road at sunset class="hero-img hero-img-lg" />
+                                <img src="https://images.unspash.com/photo-1502602898657-3e91760cbb34?w=400&q=80" alt="paris cafe" class="hero-img hero-img sm float-1" />
+                                <img src="https://images.unspash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="Tropical beach" class="hero-img hero-img-sm float-2" />
+                            </div>
+                        </div>
+                    </section>
+                </main>
 
-                <label for="mode">Transport Mode:</label>
-                <select id="mode">
-                    <option value="bus">Bus</option>
-                    <option value="train">Train</option>
-                    <option value="bike">Bike</option>
-                    <option value="walking">Walking</option>
-                </select>
+                <section class="features">
+                    <div class="container">
+                        <h2 class="section-title">Everything you need <em> for the road</em> . </h2>
+                        <div class="features-grid">
+                            <article class=""
+                        </div>
+                    </div>
+                </section>
 
-                <button type="submit">Plan Trip</button>
-            </form>
 
-            <section id="results">
-                <h2>Trip Results</h2>
-                <div id="trip-results"></div>
-                <button id="new-trip">Plan Another Trip</button>
-            </section>
-        </main>
-
-        <script src="script.js"></script>
-    </body>
-</html>
