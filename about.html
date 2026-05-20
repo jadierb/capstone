@@ -33,3 +33,186 @@
       </div>
     </div>
   </header>
+  <section class="page-header">
+    <div class="container">
+      <p class="kicker">about wayfare</p>
+      <h1>Built by travellers, for the road less spreadsheeted.</h1>
+      <p>Wayfare started as a senior capstone project at the Academy of Innovative Technology. We wanted a planner that respected our time, our wallets, and our weather apps — so we built one.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2-uneven">
+      <div>
+        <h2 class="section-title">Our story</h2>
+        <p>Most travel apps want a sign-up, a subscription, and your data. Wayfare wants none of that. Trips you build stay in your browser's storage. You can clear them in one click. You own everything.</p>
+        <p>The project meets every requirement of the AIT Web Development capstone rubric — and we hope it does a bit more than that. We hope you actually plan a trip with it.</p>
+
+        <h3 style="margin-top:32px;">What's in the box</h3>
+        <div class="content-list">
+          <ol>
+            <li>A multi-stop itinerary planner that saves locally.</li>
+            <li>A categorised budget tracker with totals and averages.</li>
+            <li>A live weather dashboard powered by Open-Meteo.</li>
+            <li>A country reference card pulled from the REST Countries API.</li>
+            <li>A friendly account system so each device keeps its own trips.</li>
+          </ol>
+        </div>
+
+        <h3 style="margin-top:24px;">Tools used along the way</h3>
+        <div class="content-list">
+          <ul>
+            <li>HTML5 semantic markup &amp; CSS variables</li>
+            <li>Vanilla JavaScript (no frameworks)</li>
+            <li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries</a> + <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo</a> public APIs</li>
+            <li>localStorage for offline-first persistence</li>
+            <li>Photography from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside>
+        <h3>Watch the pitch</h3>
+        <div class="media-frame">
+          <iframe src="https://www.youtube.com/embed/UAVf2a2_Fb8" title="Travel inspiration video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <h3 style="margin-top:28px;">Pre-trip jingle</h3>
+        <p class="muted" style="font-size:0.9rem;">A short ambient clip to set the mood while you plan.</p>
+        <div class="audio-row">
+          <audio controls preload="none" data-testid="audio-player">
+            <source src="https://www.kozco.com/tech/piano2-CoolEdit.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Travel backpack and map" style="margin-top:28px; border-radius:14px; border:1px solid var(--line);" />
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
+  </footer>
+  <script src="js/common.js"></script>
+</body>
+</html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Wayfare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></a>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-testid="nav-home">Home</a></li>
+          <li><a href="destinations.html" data-testid="nav-destinations">Destinations</a></li>
+          <li><a href="planner.html" data-testid="nav-planner">Planner</a></li>
+          <li><a href="budget.html" data-testid="nav-budget">Budget</a></li>
+          <li><a href="weather.html" data-testid="nav-weather">Weather</a></li>
+          <li><a href="about.html" data-testid="nav-about">About</a></li>
+          <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <span id="userBadge" class="user-badge hidden"></span>
+        <a href="login.html" id="loginLink" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" id="signupLink" class="btn btn-primary">Sign up</a>
+        <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="kicker">about wayfare</p>
+      <h1>Built by travellers, for the road less spreadsheeted.</h1>
+      <p>Wayfare started as a senior capstone project at the Academy of Innovative Technology. We wanted a planner that respected our time, our wallets, and our weather apps — so we built one.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2-uneven">
+      <div>
+        <h2 class="section-title">Our story</h2>
+        <p>Most travel apps want a sign-up, a subscription, and your data. Wayfare wants none of that. Trips you build stay in your browser's storage. You can clear them in one click. You own everything.</p>
+        <p>The project meets every requirement of the AIT Web Development capstone rubric — and we hope it does a bit more than that. We hope you actually plan a trip with it.</p>
+
+        <h3 style="margin-top:32px;">What's in the box</h3>
+        <div class="content-list">
+          <ol>
+            <li>A multi-stop itinerary planner that saves locally.</li>
+            <li>A categorised budget tracker with totals and averages.</li>
+            <li>A live weather dashboard powered by Open-Meteo.</li>
+            <li>A country reference card pulled from the REST Countries API.</li>
+            <li>A friendly account system so each device keeps its own trips.</li>
+          </ol>
+        </div>
+
+        <h3 style="margin-top:24px;">Tools used along the way</h3>
+        <div class="content-list">
+          <ul>
+            <li>HTML5 semantic markup &amp; CSS variables</li>
+            <li>Vanilla JavaScript (no frameworks)</li>
+            <li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries</a> + <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo</a> public APIs</li>
+            <li>localStorage for offline-first persistence</li>
+            <li>Photography from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside>
+        <h3>Watch the pitch</h3>
+        <div class="media-frame">
+          <iframe src="https://www.youtube.com/embed/UAVf2a2_Fb8" title="Travel inspiration video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <h3 style="margin-top:28px;">Pre-trip jingle</h3>
+        <p class="muted" style="font-size:0.9rem;">A short ambient clip to set the mood while you plan.</p>
+        <div class="audio-row">
+          <audio controls preload="none" data-testid="audio-player">
+            <source src="https://www.kozco.com/tech/piano2-CoolEdit.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80" alt="Travel backpack and map" style="margin-top:28px; border-radius:14px; border:1px solid var(--line);" />
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
+  </footer>
+  <script src="js/common.js"></script>
+</body>
+</html>
