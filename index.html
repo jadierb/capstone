@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body data-page="home"
-    <!--HEADER -->
+
+    <!---- header-->
     
         <header class="site-header" id="siteHeader">
             <div class="container header-inner">
@@ -75,13 +76,104 @@
                     </section>
                 </main>
 
+                <!--features-->
                 <section class="features">
                     <div class="container">
                         <h2 class="section-title">Everything you need <em> for the road</em> . </h2>
                         <div class="features-grid">
                             <article class=""
                         </div>
-                    </div>
-                </section>
+                    </div><article class="feature-card" data-testid="feature-itinerary">
+            <div class="feature-icon" aria-hidden="true">📍</div>
+            <h3>Day-by-day itineraries</h3>
+            <p>Drop in stops, notes, and times. Save your trips locally — no account spam.</p>
+            <a href="planner.html" class="link-arrow">Open the planner →</a>
+          </article>
+          <article class="feature-card" data-testid="feature-budget">
+            <div class="feature-icon" aria-hidden="true">💰</div>
+            <h3>Honest budget tracker</h3>
+            <p>Log every expense by category. See where the money is actually going.</p>
+            <a href="budget.html" class="link-arrow">Track a budget →</a>
+          </article>
+          <article class="feature-card" data-testid="feature-weather">
+            <div class="feature-icon" aria-hidden="true">⛅</div>
+            <h3>Live weather peek</h3>
+            <p>7-day forecasts pulled fresh from Open-Meteo for any city on Earth.</p>
+            <a href="weather.html" class="link-arrow">Check weather →</a>
+          </article>
+          <article class="feature-card" data-testid="feature-countries">
+            <div class="feature-icon" aria-hidden="true">🌍</div>
+            <h3>Country know-how</h3>
+            <p>Capitals, currencies, languages, flags — all via the REST Countries API.</p>
+            <a href="destinations.html" class="link-arrow">Browse destinations →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="gallery-strip">
+      <div class="container">
+        <h2 class="section-title">Where folks went last week.</h2>
+        <div class="gallery-grid">
+          <figure><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500&q=80" alt="Kyoto bamboo grove" /><figcaption>Kyoto, JP</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=500&q=80" alt="Venice canal" /><figcaption>Venice, IT</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=500&q=80" alt="Marrakech market" /><figcaption>Marrakech, MA</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1526481280643-3bbe2068634d?w=500&q=80" alt="Iceland waterfall" /><figcaption>Reykjavík, IS</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Ready when you are.</h2>
+        <p>Make an account in ten seconds. Your trips stay on your device.</p>
+        <a href="signup.html" class="btn btn-primary btn-lg" data-testid="cta-signup">Create your account</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="planner.html">Trip planner</a></li>
+          <li><a href="budget.html">Budget</a></li>
+          <li><a href="weather.html">Weather</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Built with</h4>
+        <ul>
+          <li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li>
+          <li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li>
+          <li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+</body>
+</html>
+            
 
 
