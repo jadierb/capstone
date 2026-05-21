@@ -341,8 +341,8 @@ p {margin: 0 0 1em; }
 .footer-bottom {
   border-top: 1px solid var(--line);
   padding-top: 18px;
-  color: var(--muted)
-   font-size: 0.85rem;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* ---------- Page header (interior pages) ---------- */
