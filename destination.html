@@ -1,40 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - Trip Planner</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <div class="header-inner">
-        <a class="logo" href="index.html">Trip Planner</a>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="content.html">Content</a></li>
-            <li><a href="galery.html">Gallery</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="destinations-list">
-        <h1>Popular Destinations</h1>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Wayfare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></a>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
         <ul>
-          <li>Mountain Escape — quiet trails and scenic views</li>
-          <li>Beach Retreat — sun, sand, and sea activities</li>
-          <li>City Adventure — culture, food, and nightlife</li>
+          <li><a href="index.html" data-testid="nav-home">Home</a></li>
+          <li><a href="destinations.html" data-testid="nav-destinations">Destinations</a></li>
+          <li><a href="planner.html" data-testid="nav-planner">Planner</a></li>
+          <li><a href="budget.html" data-testid="nav-budget">Budget</a></li>
+          <li><a href="weather.html" data-testid="nav-weather">Weather</a></li>
+          <li><a href="about.html" data-testid="nav-about">About</a></li>
+          <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
         </ul>
-      </section>
-    </main>
+      </nav>
+      <div class="nav-actions">
+        <span id="userBadge" class="user-badge hidden"></span>
+        <a href="login.html" id="loginLink" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" id="signupLink" class="btn btn-primary">Sign up</a>
+        <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-      <p>&copy; 2026 Trip Planner</p>
-    </footer>
-  </body>
-</html>
+  <section class="page-header">
+    <div class="container">
+      <p class="kicker">say hi</p>
+      <h1>Got an idea, bug, or a place we should visit?</h1>
+      <p>Drop a note below and we'll get back to you. Messages are saved locally for this demo — in a real product they'd go to a real inbox.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="card">
+        <h3>Send a message</h3>
+        <form id="contactForm" data-testid="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cName">Your name</label>
+              <input class="input" id="cName" type="text" placeholder="Amelia Park" required data-testid="contact-name" />
+            </div>
+            <div class="form-row">
+              <label for="cEmail">Email</label>
+              <input class="input" id="cEmail" type="email" placeholder="you@example.com" required data-testid="contact-email" />
+            </div>
+            <div class="form-row full">
+              <label for="cTopic">Topic</label>
+              <select class="select" id="cTopic" data-testid="contact-topic">
+                <option value="general">General question</option>
+                <option value="bug">Bug report</option>
+                <option value="idea">Feature idea</option>
+                <option value="partner">Partnership</option>
+              </select>
+            </div>
+            <div class="form-row full">
+              <label for="cMessage">Message</label>
+              <textarea class="textarea" id="cMessage" placeholder="Tell us a little about it…" required data-testid="contact-message"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-testid="contact-submit">Send message</button>
+            <button type="reset" class="btn btn-ghost" data-testid="contact-reset">Clear</button>
+          </div>
+          <div class="form-feedback" id="contactFeedback"></div>
+        </form>
+      </div>
+
+      <div>
+        <h3>Other ways to reach us</h3>
+        <p class="muted">We hang out in the usual places. Pick whichever you like.</p>
+        <ul style="margin-top:16px;">
+          <li style="margin:10px 0;">📨 <strong>hello@wayfare.example</strong></li>
+          <li style="margin:10px 0;">🏫 Academy of Innovative Technology</li>
+          <li style="margin:10px 0;">🕘 Mon–Fri, 9am–4pm ET</li>
+        </ul>
+        <img src="https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=700&q=80" alt="Vintage telephone" style="margin-top:18px; border-radius:14px; border:1px solid var(--line); width:100%; height:280px; object-fit:cover;" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const feedback = document.getElementById('contactFeedback');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('cName').value.trim();
+        const email = document.getElementById('cEmail').value.trim();
+        const topic = document.getElementById('cTopic').value;
+        const message = document.getElementById('cMessage').value.trim();
+        if (!name || !email || !message) {
+          feedback.className = 'form-feedback error';
+          feedback.textContent = 'Please fill in your name, email, and a message.';
+          return;
+        }
+        const messages = JSON.parse(localStorage.getItem('wayfare:messages') || '[]');
+        messages.push({ name, email, topic, message, when: new Date().toISOString() });
+        localStorage.setItem('wayfare:messages', JSON.stringify(messages));
+        feedback.className = 'form-feedback success';
+        feedback.textContent = `Thanks ${name}! We'll be in touch about your ${topic} note.`;
+        form.reset();
+      });
+    })();
+  </script>
+</body>
