@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget — Wayfare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="budget">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></a>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-testid="nav-home">Home</a></li>
+          <li><a href="destinations.html" data-testid="nav-destinations">Destinations</a></li>
+          <li><a href="planner.html" data-testid="nav-planner">Planner</a></li>
+          <li><a href="budget.html" data-testid="nav-budget">Budget</a></li>
+          <li><a href="weather.html" data-testid="nav-weather">Weather</a></li>
+          <li><a href="about.html" data-testid="nav-about">About</a></li>
+          <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+       <div class="nav-actions">
+        <span id="userBadge" class="user-badge hidden"></span>
+        <a href="login.html" id="loginLink" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" id="signupLink" class="btn btn-primary">Sign up</a>
+        <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
+    </div>
+    </header>
+    <section class="page-header">
+    <div class="container">
+      <p class="kicker">budget</p>
+      <h1>Where the money <em>actually</em> goes.</h1>
+      <p>Add expenses by category and currency. Wayfare totals everything for you and shows the average per entry.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="budget-summary">
+        <div class="stat"><div class="label">Entries</div><div class="value" id="statCount" data-testid="stat-count">0</div></div>
+        <div class="stat teal"><div class="label">Total spent</div><div class="value" id="statTotal" data-testid="stat-total">$0.00</div></div>
+        <div class="stat"><div class="label">Average / entry</div><div class="value" id="statAvg" data-testid="stat-avg">$0.00</div></div>
+        <div class="stat accent"><div class="label">Top category</div><div class="value" id="statTop" data-testid="stat-top">—</div></div>
+      </div>
+
+      <div class="grid-2-uneven">
+        <div class="card">
+          <h3>Log an expense</h3>
+          <form id="expenseForm" data-testid="expense-form" novalidate>
+            <div class="form-row">
+              <label for="eLabel">What was it?</label>
+              <input class="input" id="eLabel" type="text" placeholder="Train to Osaka" required data-testid="expense-label" />
+            </div>
+            <div class="form-grid">
+              <div class="form-row">
+                <label for="eAmount">Amount</label>
+                <input class="input" id="eAmount" type="number" min="0" step="0.01" placeholder="0.00" required data-testid="expense-amount" />
+              </div>
+               <div class="form-row">
+                <label for="eCurrency">Currency</label>
+                <select class="select" id="eCurrency" data-testid="expense-currency">
+                  <option value="USD">USD — US Dollar</option>
+                  <option value="EUR">EUR — Euro</option>
+                  <option value="GBP">GBP — Pound</option>
+                  <option value="JPY">JPY — Yen</option>
+                  <option value="MXN">MXN — Peso</option>
+                  <option value="AUD">AUD — Aussie Dollar</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+                <label for="eCategory">Category</label>
+              <select class="select" id="eCategory" data-testid="expense-category">
+                <option value="flights">✈️ Flights</option>
+                <option value="lodging">🏨 Lodging</option>
+                <option value="food">🍜 Food</option>
+                <option value="transport">🚇 Transport</option>
+                <option value="activities">🎟️ Activities</option>
+                <option value="shopping">🛍️ Shopping</option>
+                <option value="other">📦 Other</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-testid="expense-submit">Add expense</button>
+              <button class="btn btn-ghost" type="reset" data-testid="expense-reset">Clear</button>
+            </div>
+            <div class="form-feedback" id="expenseFeedback"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0;">Expense log</h3>
+            <button class="btn btn-danger" id="clearAll" data-testid="expense-clear-all">Clear all</button>
+          </div>
+          <div class="table-wrap" style="margin-top:16px;">
+            <table class="data-table" data-testid="expense-table">
+              <thead>
+                <tr><th>Item</th><th>Category</th><th>Amount</th><th>When</th><th></th></tr>
+              </thead>
+              <tbody id="expenseBody">
+                <tr><td colspan="5" class="empty-state">Nothing logged yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/budget.js"></script>
+</body>
+</html>
+
+
