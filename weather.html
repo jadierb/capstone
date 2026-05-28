@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather — Wayfare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="weather">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></a>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-testid="nav-home">Home</a></li>
+          <li><a href="destinations.html" data-testid="nav-destinations">Destinations</a></li>
+          <li><a href="planner.html" data-testid="nav-planner">Planner</a></li>
+          <li><a href="budget.html" data-testid="nav-budget">Budget</a></li>
+          <li><a href="weather.html" data-testid="nav-weather">Weather</a></li>
+          <li><a href="about.html" data-testid="nav-about">About</a></li>
+          <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <span id="userBadge" class="user-badge hidden"></span>
+        <a href="login.html" id="loginLink" class="btn btn-ghost">Log in</a>
+        <a href="signup.html" id="signupLink" class="btn btn-primary">Sign up</a>
+        <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+        <button class="nav-toggle" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="kicker">weather</p>
+      <h1>Check the sky before you pack the bag.</h1>
+      <p>Pick a city below — we'll geocode it and pull a 7-day forecast from Open-Meteo (no API key, free forever).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="cityInput">City</label>
+            <input class="input" id="cityInput" type="text" placeholder="Kyoto" value="Kyoto" data-testid="city-input" />
+          </div>
+          <div class="form-row">
+            <label for="unitSelect">Units</label>
+            <select class="select" id="unitSelect" data-testid="unit-select">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" id="checkBtn" data-testid="check-weather">Check weather</button>
+          <span id="weatherStatus" class="muted"></span>
+        </div>
+      </div>
+
+      <div id="weatherResult" class="hidden" style="margin-top:24px;">
+        <div class="weather-now" data-testid="weather-now">
+          <div>
+            <p class="kicker" style="color:var(--coral); margin:0;">right now in</p>
+            <h2 id="resultCity" style="color:var(--cream); margin:6px 0;">—</h2>
+            <p id="resultDesc" style="margin:0; color:rgba(255,249,239,0.8);">—</p>
+          </div>
+          <div class="temp" id="resultTemp">—</div>
+        </div>
+        <h3 style="margin-top:24px;">7-day outlook</h3>
+        <div id="weatherGrid" class="weather-grid" data-testid="weather-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+        <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/weather.js"></script>
+</body>
+</html>
