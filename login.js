@@ -12,7 +12,7 @@
 <body data-page="login">
     <header class="site-header">
         <div class="container header-inner">
-            <a href="index.html" class="brand"><span class="brand-mark">W</span>
+            <a  href="index.html" class="brand"><span class="brand-mark">W</span>
                 <nav class="site-nav" id="siteNav" aria-label="Main navigation">
                     <ul>
                         <li><a href="index.html" data-testid="nav-home"></a></li>
