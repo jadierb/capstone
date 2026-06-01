@@ -1,4 +1,5 @@
-<
+
+const loginPage = `<!DOCTYPE html>
 <html lang="en">
     <head> 
       <meta charset="UTF-8" />
@@ -23,4 +24,7 @@
         </div>
     </header>
 </body>
-</html>
+</html>`;
+
+
+export default loginPage;

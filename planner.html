@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Trip Planner</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner — Wayfare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Manrope:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <header>
-      <div class="header-inner">
-        <a class="logo" href="index.html">Trip Planner</a>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destination.html">Destination</a></li>
-            <li><a href="content.html">Content</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="about.html">About</a></li>
+  <body data-page="planner">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></a>
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html" data-testid="nav-home">Home</a></li>
+            <li><a href="destinations.html" data-testid="nav-destinations">Destinations</a></li>
+            <li><a href="planner.html" data-testid="nav-planner">Planner</a></li>
+            <li><a href="budget.html" data-testid="nav-budget">Budget</a></li>
+            <li><a href="weather.html" data-testid="nav-weather">Weather</a></li>
+            <li><a href="about.html" data-testid="nav-about">About</a></li>
+            <li><a href="contact.html" data-testid="nav-contact">Contact</a></li>
           </ul>
         </nav>
+        <div class="nav-actions">
+          <span id="userBadge" class="user-badge hidden"></span>
+          <a href="login.html" id="loginLink" class="btn btn-ghost">Log in</a>
+          <a href="signup.html" id="signupLink" class="btn btn-primary">Sign up</a>
+          <button id="logoutBtn" class="btn btn-ghost hidden">Log out</button>
+          <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section class="gallery-hero">
-        <h1>Photo Gallery</h1>
-        <p>Browse images from beach, mountain, city, and cultural travel experiences.</p>
-      </section>
+    <section class="page-header">
+      <div class="container">
+        <p class="kicker">trip planner</p>
+        <h1>Plan your trip — stops, dates, and notes</h1>
+        <p class="lede">Add stops to your itinerary, reorder them, and save to your browser. Data is stored per account (or as guest).</p>
+      </div>
+    </section>
 
-      <section class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1176062521v2.jpg?c=original" alt="Beach scene">
-          <figcaption>Beach Sunset</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=800&q=80" alt="Mountain path">
-          <figcaption>Mountain Trail</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=800&q=80" alt="City skyline">
-          <figcaption>City Skyline</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Cultural festival">
-          <figcaption>Cultural Festival</figcaption>
-        </figure>
-      </section>
+    <section class="section">
+      <div class="container grid-2-uneven">
+        <div class="card">
+          <h3>Add a stop</h3>
+          <form id="stopForm" novalidate>
+            <div class="form-row">
+              <label for="sLocation">Location</label>
+              <input class="input" id="sLocation" type="text" placeholder="Kyoto, Japan" required />
+            </div>
+            <div class="form-row">
+              <label for="sDate">Date</label>
+              <input class="input" id="sDate" type="date" />
+            </div>
+            <div class="form-row full">
+              <label for="sNotes">Notes</label>
+              <textarea id="sNotes" class="textarea" placeholder="Things to do, reservations, notes..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Add stop</button>
+              <button class="btn btn-ghost" type="reset">Clear</button>
+            </div>
+            <div id="stopFeedback" class="form-feedback"></div>
+          </form>
+        </div>
 
-      <section class="image-details">
-        <div class="nested-block">
-          <h2>Large and Small Images</h2>
-          <p>This page contains a mix of large gallery images and smaller thumbnails for contrast.</p>
-          <div class="thumbnail-row">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=80" alt="Small mountain image" class="small-image">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80" alt="Small beach image" class="small-image">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0;">Itinerary</h3>
+            <button id="clearAll" class="btn btn-danger">Clear all</button>
+          </div>
+          <div class="table-wrap" style="margin-top:16px;">
+            <table class="data-table">
+              <thead>
+                <tr><th>When</th><th>Location</th><th>Notes</th><th></th></tr>
+              </thead>
+              <tbody id="stopsBody">
+                <tr><td colspan="4" class="empty-state">No stops yet. Add your first stop.</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      <p><a href="index.html">Back to Home</a> | <a href="about.html">Learn more about us</a></p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="brand"><span class="brand-mark">W</span><span class="brand-text">Wayfare</span></div>
+          <p class="muted">A senior capstone project — built with plain HTML, CSS &amp; JavaScript.</p>
+        </div>
+        <div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="planner.html">Trip planner</a></li><li><a href="budget.html">Budget</a></li><li><a href="weather.html">Weather</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Built with</h4><ul><li><a href="https://restcountries.com" target="_blank" rel="noopener noreferrer">REST Countries ↗</a></li><li><a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></li><li><a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash ↗</a></li></ul></div>
+      </div>
+      <div class="container footer-bottom"><small>© 2026 Wayfare. Made for the Academy of Innovative Technology capstone.</small></div>
     </footer>
+
+    <script src="js/common.js"></script>
+    <script src="planner.js"></script>
   </body>
 </html>
